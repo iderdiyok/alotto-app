@@ -1,4 +1,4 @@
-# vue-apollo-test
+# alotto-app
 
 ## Project setup
 ```

@@ -1,8 +1,15 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import './assets/css/index.css'
 
-Vue.config.productionTip = false
+import { createProvider } from './vue-apollo'
+import { date } from './filters';
+
+Vue.filter('date', date);
 
 new Vue({
-  render: h => h(App),
+    router,
+    apolloProvider: createProvider(),
+    render: h => h(App)
 }).$mount('#app')
